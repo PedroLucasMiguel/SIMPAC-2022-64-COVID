@@ -8,6 +8,6 @@
 m_to_calculate = 4;
 
 parfor m = 1 : m_to_calculate
-   parallel_execution(m);
+   parallel_execution_singleclass(m);
 end
 

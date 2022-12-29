@@ -1,4 +1,4 @@
-function [ sig ] = signatures(img, m)
+function [ sig ] = signatures(img, m, image_name)
     
   % ---------------------
   % This function calculates the SampEn signatures for a given image (Section 3.2.1 in [1])
@@ -13,7 +13,7 @@ function [ sig ] = signatures(img, m)
   
   i = 1;
    for r = 0.06 : 0.02 : 0.4
-     fprintf("Calculating SampEn for m = %d and r = %f ...\n", m, r);
+     fprintf("Calculating SampEn for (%s) m = %d and r = %f ...\n", image_name, m, r);
      sig(1, i) = avr_SampEn(img, m, r, v, n); % Equation 9 in [1]
      i = i + 1;
    end

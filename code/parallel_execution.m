@@ -19,12 +19,10 @@ function parallel_execution(m)
                     img = imread(image_path);
                     
                     % SampEn signatures (Section 3.2.1 in [1])
-                    sig = signatures(img, m);
+                    sig = signatures(img, m, class_dir(image_index).name);
                     aux = zeros(1, 18);
                     
-                    aux(1, :) = sig(1, 1:18); % signature for m 
-                    
-                    disp(aux(1, :));
+                    aux(1, :) = sig(1, 1:18); % signature for m
     
                     % SampEn metrics (Section 3.2.2 in [1])
                     met = zeros(1, 4);

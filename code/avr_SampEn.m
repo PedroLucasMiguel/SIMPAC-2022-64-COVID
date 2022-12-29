@@ -44,7 +44,7 @@ function [ se ] = avr_SampEn(img, m, r, v, n)
     i = i + 1;
     
   end
-  
+
   se = mean(se, 'omitnan'); % I'm not shure about that change
                             % but i'll let like this for now
     
