@@ -17,6 +17,7 @@ function parallel_execution(m)
                     % Starting the original algorithm :^)
                     % Input image
                     img = imread(image_path);
+                    img = imrezise(img, [1040, 1388]);
                     
                     % SampEn signatures (Section 3.2.1 in [1])
                     sig = signatures(img, m, class_dir(image_index).name);

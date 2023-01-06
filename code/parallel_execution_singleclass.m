@@ -10,9 +10,10 @@ function parallel_execution_singleclass(m)
            % Starting the original algorithm :^)
            % Input image
            img = imread(image_path);
-                    
+     
            % SampEn signatures (Section 3.2.1 in [1])
            sig = signatures(img, m, class_dir(image_index).name);
+           disp(sig);
            aux = zeros(1, 18);
                     
            aux(1, :) = sig(1, 1:18); % signature for m
@@ -41,9 +42,9 @@ function parallel_execution_singleclass(m)
 
            saveas(gcf, strcat(save_path, strcat('/m', string(m), ".png")));
                     
-           fprintf("\nSampEn signatures metrics:\n");
+           %fprintf("\nSampEn signatures metrics:\n");
 
-           display(met);
+           %display(met);
            
            jsonFieldName = replace(class_dir(image_index).name, ").png", "");
            jsonFieldName = replace(jsonFieldName, " (", "");

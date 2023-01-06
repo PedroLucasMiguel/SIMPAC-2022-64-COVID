@@ -6,7 +6,7 @@ function [ sig ] = signatures(img, m, image_name)
   % [1] Rozendo, G. B., Nascimento, M. Z., Roberto G. F., Faria, P. R., Silva, A. B., Tosta, T. A. A., Neves, L. A. (2022). Classification of Non-Hodgkin Lymphomas Based on Sample Entropy Signatures. Expert Systems with Applications.
   % ---------------------
   
-  v = 180; % number of sub-images
+  v = 180; % number of sub-images 180
   n = 40; % subimage size
   
   sig = zeros(1, 72);
